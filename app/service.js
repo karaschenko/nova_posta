@@ -16,5 +16,6 @@ novapostaApp.service('novapostaService', function($http){
     return {
         getCities: getCities
     }
+
 });
 
