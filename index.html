@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="en" ng-app="novapostaApp">
+  <head>
+    <meta charset="utf-8">
+    <title>Nova posta</title>
+    <link rel="stylesheet" href="app/bower_components/bootstrap/dist/css/bootstrap.css" />
+    <link rel="stylesheet" href="app/app.css" />
+
+  </head>
+  <body ng-controller="novapostaController">
+
+  <div class="container">
+      <div ng-view></div>
+  </div>
+
+  <script src="node_modules/angular/angular.js"></script>
+  <script src="node_modules/angular-route/angular-route.min.js"></script>
+  <script src="app/app.js"></script>
+  <script src="app/routeConfig.js"></script>
+  <script src="app/service.js"></script>
+  <script src="app/controller.js"></script>
+  </body>
+</html>

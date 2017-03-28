@@ -1,11 +1,12 @@
-config(['$routeProvider',
-    function($routeProvider) {
-        $routeProvider.
-        when('/cities', {
-            templateUrl: 'partials/cities.html',
-            controller: 'novapostaController'}).
+novapostaApp
+    .config(['$routeProvider', function($routeProvider) {
+        $routeProvider
+            .when('/cities', {
+                templateUrl: 'app/partials/cities.html',
+                controller: 'novapostaController'
+            })
 
-        otherwise({
-            redirectTo: '/cities'
-        });
+            .otherwise({
+                redirectTo: '/cities'
+            });
     }]);
