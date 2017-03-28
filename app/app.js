@@ -1,6 +1,5 @@
 'use strict';
 
-
-var novapostaApp = angular.module('novapostaApp', []);
+var novapostaApp = angular.module('novapostaApp', ['ngRoute']);
 
 
