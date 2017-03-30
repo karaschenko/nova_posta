@@ -1,11 +1,17 @@
 <div class="row">
-    <div class="form-group">
-        <input type="text" ng-model="searchfield" class="form-control" placeholder="Поиск по городам"/>
-    </div>
+    <div class="col-md-6">
+        <div class="form-group">
+            <input type="text" ng-model="searchfield" class="form-control" placeholder="Поиск по городам"/>
+        </div>
 
-    <ul>
-        <li ng-repeat="item in items | filter:searchfield">
-            <span><a href="/#/cities/{{item.Description}}/{{item.Ref}}">{{item.DescriptionRu}}</a></span>
-        </li>
-    </ul>
+        <ul>
+            <li ng-repeat="item in items | filter:searchfield">
+                <span><a href="/#/cities/{{item.Description}}/{{item.Ref}}">{{item.DescriptionRu}}</a></span>
+                <span ng-click="onMap(item.DescriptionRu)">НА КАРТЕ</span>
+            </li>
+        </ul>
+    </div>
+    <div class="col-md-6">
+        <map id="map"></map>
+    </div>
 </div>

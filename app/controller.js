@@ -5,7 +5,21 @@ novapostaApp.controller('novapostaController', function novapostaController($sco
         $scope.Description= $routeParams.Description;
 
     });
+    $scope.onMap = function (city){
+
+        novapostaService.onMap(function (data) {
+
+        }, city)
+    }
+
+
+
 });
+
+
+
+
+
 
 novapostaApp.controller('cityController', function cityController($scope, cityService, $routeParams) {
 

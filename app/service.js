@@ -11,10 +11,17 @@ novapostaApp.service('novapostaService', function($http){
                 callback(data.data);
             });
     }
+    function  onMap(callback, city) {
+        console.log(city);
+        $http.get('http://maps.googleapis.com/maps/api/geocode/json?address=Украина,+' + city ).success(function(data){
+            callback(data);
+        });
+    }
 
 
     return {
-        getCities: getCities
+        getCities: getCities,
+        onMap: onMap
     }
 
 });
@@ -30,7 +37,7 @@ novapostaApp.service('cityService', function($http){
                 },
 
                 "apiKey": "976bd550daded120decc0c1b35d13546"}).success(function(data) {
-            callback(data.data);
+                callback(data.data);
         });
     }
 
